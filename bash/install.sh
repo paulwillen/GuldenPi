@@ -5,9 +5,9 @@ sudo apt-get -y --force-yes upgrade
 cd /
 
 sudo mkdir /guldenserver
-sudo wget https://developer.gulden.com/download/161/Gulden161-linux32.tar.xz -P /guldenserver
+sudo wget https://github.com/Gulden/gulden-official/releases/download/v1.6.3/Gulden-1.6.3-arm-linux-gnueabihf.tar.gz -P /guldenserver
 
-sudo tar -xvf /guldenserver/Gulden161-linux32.tar.xz -C /guldenserver/
+sudo tar -xvf /guldenserver/Gulden-1.6.3-arm-linux-gnueabihf.tar.gz -C /guldenserver/
 sudo mkdir /guldenserver/datadir
 sudo touch /guldenserver/datadir/Gulden.conf
 
@@ -39,4 +39,4 @@ sudo ufw enable
 sudo touch /guldenserver/run.sh
 echo "killall -9 GuldenD" >> /guldenserver/run.sh
 echo "rm -rf /guldenserver/peers.dat" >> /guldenserver/run.sh
-echo "./guldenserver/Gulden-1.6.1-i686-linux/GuldenD -datadir=./guldenserver/datadir &" >> /guldenserver/run.sh
+echo "./guldenserver/Gulden-1.6.3-arm-linux-gnueabihf/GuldenD -datadir=./guldenserver/datadir &" >> /guldenserver/run.sh
