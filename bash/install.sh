@@ -36,8 +36,7 @@ sudo ufw enable
 
 ############# Create autorun file ####
 
-
 sudo touch /guldenserver/run.sh
 echo "killall -9 GuldenD" >> /guldenserver/run.sh
-echo "rm -rf /guldenserver/seeddata/peers.dat" /guldenserver/run.sh
+echo "rm -rf /guldenserver/peers.dat" >> /guldenserver/run.sh
 echo "./guldenserver/Gulden-1.6.1-i686-linux/GuldenD -datadir=./guldenserver/datadir &" >> /guldenserver/run.sh
