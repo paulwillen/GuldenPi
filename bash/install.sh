@@ -12,7 +12,7 @@ cd /
 mkdir /guldenserver
 wget https://github.com/Gulden/gulden-official/releases/download/v1.6.4.3/Gulden-1.6.4-arm-linux-eabihf.tar.gz -P /guldenserver
 
-tar -xvf /guldenserver/Gulden-1.6.3-arm-linux-gnueabihf.tar.gz -C /guldenserver/
+tar -xvf /guldenserver/Gulden-1.6.4-arm-linux-eabihf.tar.gz -C /guldenserver/
 mkdir /guldenserver/datadir
 rm -rf /guldenserver/datadir/Gulden.conf
 touch /guldenserver/datadir/Gulden.conf
@@ -37,7 +37,7 @@ ufw enable
 
 #####  Run the Gulden Application ####
 
-/guldenserver/Gulden-1.6.3/bin/GuldenD -datadir=/guldenserver/datadir &
+/guldenserver/GuldenD -datadir=/guldenserver/datadir &
 
 ############# Create autorun file ####
 rm -rf /guldenserver/run.sh
@@ -45,7 +45,7 @@ touch /guldenserver/run.sh
 echo "#!/bin/bash -" >> /guldenserver/run.sh
 echo "killall -9 GuldenD" >> /guldenserver/run.sh
 echo "rm -rf /guldenserver/peers.dat" >> /guldenserver/run.sh
-echo "./guldenserver/Gulden-1.6.3/bin/GuldenD -datadir=./guldenserver/datadir &" >> /guldenserver/run.sh
+echo "./guldenserver/GuldenD -datadir=./guldenserver/datadir &" >> /guldenserver/run.sh
 chmod 744 /guldenserver/run.sh
 
 
