@@ -11,10 +11,10 @@ cd /
 
 mkdir /guldenserver
 
-wget https://github.com/Gulden/gulden-official/releases/download/v1.6.4.6/Gulden-1.6.4.6-arm-linux-eabihf.tar.gz -P /guldenserver
+wget https://github.com/Gulden/gulden-official/releases/download/v1.6.4.10/Gulden-1.6.4.10-arm-linux-eabihf.tar.gz -P /guldenserver
 
 
-tar -xvf /guldenserver/Gulden-1.6.4.6-arm-linux-eabihf.tar.gz -C /guldenserver/
+tar -xvf /guldenserver/Gulden-1.6.4.10-arm-linux-eabihf.tar.gz -C /guldenserver/
 mkdir /guldenserver/datadir
 rm -rf /guldenserver/datadir/Gulden.conf
 touch /guldenserver/datadir/Gulden.conf
