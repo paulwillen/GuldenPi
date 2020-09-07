@@ -13,9 +13,9 @@ apt-get -y --force-yes install ufw uuid-runtime
 cd /
 
 mkdir /guldenserver
-wget https://github.com/Gulden/gulden-official/releases/download/v2.2.0.11/Gulden-2.2.0.11-arm-linux-eabihf.tar.gz -P /guldenserver
+wget https://github.com/Gulden/gulden-official/releases/download/v2.2.0.12/Gulden-2.2.0.12-arm-linux-eabihf.tar.gz -P /guldenserver
 
-tar -xvf /guldenserver/Gulden-2.2.0.11-arm-linux-eabihf.tar.gz -C /guldenserver/
+tar -xvf /guldenserver/Gulden-2.2.0.12-arm-linux-eabihf.tar.gz -C /guldenserver/
 mkdir /guldenserver/datadir
 rm -rf /guldenserver/datadir/Gulden.conf
 touch /guldenserver/datadir/Gulden.conf
